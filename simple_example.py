@@ -12,7 +12,7 @@ class AttaqueStrategy(Strategy):
     def __init__(self):
         Strategy.__init__(self,"Random")
     def compute_strategy(self,state,id_team,id_player):        
-        me = Toolbox(state, id_team, id_player)
+        me = ActionOffensive(state, id_team, id_player)
         return me.aller(me.ball_position()) + me.dribbler()
     
 #Stategie de defense
