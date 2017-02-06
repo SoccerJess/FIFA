@@ -5,9 +5,9 @@ Created on Mon Feb  6 16:57:50 2017
 @author: 3415756
 """
 
-import toolbox_Action
+from Toolbox import *
 from soccersimulator import Player,SoccerTeam
-from strategy import AttaqueStrategy,DefenseStrategy
+from simple_example import AttaqueStrategy,DefenseStrategy
 
 def get_team(i):
     s = SoccerTeam(name = "EDF")
@@ -21,4 +21,4 @@ def get_team(i):
         s.add("Cabaye", AttaqueStrategy())
         s.add("Doria", DefenseStrategy())
         s.add("Jallet", DefenseStrategy())
-    return i
+    return s

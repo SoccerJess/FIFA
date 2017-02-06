@@ -41,8 +41,9 @@ class Deplacement(Position):
     def aller(self, p):
         return SoccerAction(p-self.my_position(), Vector2D())
     
-#    def allervballe(self, p):
-#        return SoccerAction(p-self.my_position(), Vector)
+    def ralentir(self, p):
+        if (p-self.my_position() <= 10):
+            return self.aller(self.ball_position())
         
 ###############################################################################
         
